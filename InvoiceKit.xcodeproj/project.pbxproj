@@ -3,23 +3,69 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B2CE8D92521ED100016C194 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 1B2CE8D82521ED100016C194 /* SwiftUICharts */; };
+		1B2CE8DD2521F6DE0016C194 /* ChartCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2CE8DC2521F6DE0016C194 /* ChartCard.swift */; };
+		1B2CE8E02521F8740016C194 /* SingleChartCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2CE8DF2521F8740016C194 /* SingleChartCard.swift */; };
+		1B2CE8E42521FB980016C194 /* Customers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2CE8E32521FB980016C194 /* Customers.swift */; };
+		1B2CE8E72521FBC90016C194 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2CE8E62521FBC90016C194 /* Customer.swift */; };
+		1B2CE8EA2521FC500016C194 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2CE8E92521FC500016C194 /* Address.swift */; };
+		1B2CE8ED2521FC840016C194 /* Invoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2CE8EC2521FC840016C194 /* Invoice.swift */; };
+		1B2CE8F0252209E70016C194 /* Contract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2CE8EF252209E70016C194 /* Contract.swift */; };
+		1B2CE8F325220CC80016C194 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2CE8F225220CC80016C194 /* Pagination.swift */; };
+		1B2CE8F6252215590016C194 /* CustomerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2CE8F5252215590016C194 /* CustomerDetail.swift */; };
+		1B2CE8FA25221A750016C194 /* Optionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2CE8F925221A750016C194 /* Optionals.swift */; };
+		1B56413A251DF5A20085AE2E /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B564139251DF5A20085AE2E /* Layout.swift */; };
+		1B56413F251DF7130085AE2E /* Charts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B56413E251DF7130085AE2E /* Charts.swift */; };
 		1B925ECA251A3AE9007FF85D /* InvoiceKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B925EC9251A3AE9007FF85D /* InvoiceKitApp.swift */; };
 		1B925ECC251A3AE9007FF85D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B925ECB251A3AE9007FF85D /* ContentView.swift */; };
 		1B925ECE251A3AE9007FF85D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B925ECD251A3AE9007FF85D /* Assets.xcassets */; };
 		1B925ED1251A3AE9007FF85D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B925ED0251A3AE9007FF85D /* Preview Assets.xcassets */; };
+		1B925EEE251C9B39007FF85D /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 1B925EED251C9B39007FF85D /* Moya */; };
+		1B925EF3251C9B60007FF85D /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B925EF2251C9B60007FF85D /* Endpoint.swift */; };
+		1B925EF7251C9B9C007FF85D /* Targets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B925EF6251C9B9C007FF85D /* Targets.swift */; };
+		1B925EFA251CAF39007FF85D /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B925EF9251CAF39007FF85D /* Client.swift */; };
+		1B925EFE251CAF7D007FF85D /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B925EFD251CAF7D007FF85D /* Team.swift */; };
+		1BA924BA251CC37B00D0C153 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1BA924B9251CC37B00D0C153 /* KeychainSwift */; };
+		1BA924C0251CCB2400D0C153 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA924BF251CCB2400D0C153 /* Dashboard.swift */; };
+		1BA924C3251CCB3C00D0C153 /* Authenticate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA924C2251CCB3C00D0C153 /* Authenticate.swift */; };
+		1BD82C8725224E1500BCFE82 /* InvoiceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD82C8625224E1500BCFE82 /* InvoiceDetail.swift */; };
+		1BD82C8C2522543100BCFE82 /* PricingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD82C8B2522543100BCFE82 /* PricingRow.swift */; };
+		1BD82C91252258EE00BCFE82 /* BetterSafariView in Frameworks */ = {isa = PBXBuildFile; productRef = 1BD82C90252258EE00BCFE82 /* BetterSafariView */; };
+		1BD82C9425225D7C00BCFE82 /* Invoices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD82C9325225D7C00BCFE82 /* Invoices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B2CE8DC2521F6DE0016C194 /* ChartCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCard.swift; sourceTree = "<group>"; };
+		1B2CE8DF2521F8740016C194 /* SingleChartCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleChartCard.swift; sourceTree = "<group>"; };
+		1B2CE8E32521FB980016C194 /* Customers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customers.swift; sourceTree = "<group>"; };
+		1B2CE8E62521FBC90016C194 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		1B2CE8E92521FC500016C194 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		1B2CE8EC2521FC840016C194 /* Invoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invoice.swift; sourceTree = "<group>"; };
+		1B2CE8EF252209E70016C194 /* Contract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contract.swift; sourceTree = "<group>"; };
+		1B2CE8F225220CC80016C194 /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
+		1B2CE8F5252215590016C194 /* CustomerDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDetail.swift; sourceTree = "<group>"; };
+		1B2CE8F925221A750016C194 /* Optionals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optionals.swift; sourceTree = "<group>"; };
+		1B564139251DF5A20085AE2E /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		1B56413E251DF7130085AE2E /* Charts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Charts.swift; sourceTree = "<group>"; };
 		1B925EC6251A3AE9007FF85D /* InvoiceKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InvoiceKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B925EC9251A3AE9007FF85D /* InvoiceKitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceKitApp.swift; sourceTree = "<group>"; };
 		1B925ECB251A3AE9007FF85D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1B925ECD251A3AE9007FF85D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B925ED0251A3AE9007FF85D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1B925ED2251A3AE9007FF85D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B925EF2251C9B60007FF85D /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		1B925EF6251C9B9C007FF85D /* Targets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Targets.swift; sourceTree = "<group>"; };
+		1B925EF9251CAF39007FF85D /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		1B925EFD251CAF7D007FF85D /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		1BA924BF251CCB2400D0C153 /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
+		1BA924C2251CCB3C00D0C153 /* Authenticate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authenticate.swift; sourceTree = "<group>"; };
+		1BD82C8625224E1500BCFE82 /* InvoiceDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceDetail.swift; sourceTree = "<group>"; };
+		1BD82C8B2522543100BCFE82 /* PricingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricingRow.swift; sourceTree = "<group>"; };
+		1BD82C9325225D7C00BCFE82 /* Invoices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invoices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,12 +73,50 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B2CE8D92521ED100016C194 /* SwiftUICharts in Frameworks */,
+				1BA924BA251CC37B00D0C153 /* KeychainSwift in Frameworks */,
+				1B925EEE251C9B39007FF85D /* Moya in Frameworks */,
+				1BD82C91252258EE00BCFE82 /* BetterSafariView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B2CE8DB2521F6CF0016C194 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1B2CE8DC2521F6DE0016C194 /* ChartCard.swift */,
+				1B2CE8DF2521F8740016C194 /* SingleChartCard.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		1B2CE8E22521FADA0016C194 /* Customers */ = {
+			isa = PBXGroup;
+			children = (
+				1B2CE8E32521FB980016C194 /* Customers.swift */,
+				1B2CE8F5252215590016C194 /* CustomerDetail.swift */,
+			);
+			path = Customers;
+			sourceTree = "<group>";
+		};
+		1B2CE8F825221A630016C194 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1B2CE8F925221A750016C194 /* Optionals.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1B564138251DF3B80085AE2E /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				1B564139251DF5A20085AE2E /* Layout.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
 		1B925EBD251A3AE9007FF85D = {
 			isa = PBXGroup;
 			children = (
@@ -52,8 +136,11 @@
 		1B925EC8251A3AE9007FF85D /* InvoiceKit */ = {
 			isa = PBXGroup;
 			children = (
+				1B2CE8F825221A630016C194 /* Extensions */,
+				1BA924BC251CCB0300D0C153 /* Views */,
+				1B925EFC251CAF65007FF85D /* Models */,
+				1B925EF0251C9B40007FF85D /* API */,
 				1B925EC9251A3AE9007FF85D /* InvoiceKitApp.swift */,
-				1B925ECB251A3AE9007FF85D /* ContentView.swift */,
 				1B925ECD251A3AE9007FF85D /* Assets.xcassets */,
 				1B925ED2251A3AE9007FF85D /* Info.plist */,
 				1B925ECF251A3AE9007FF85D /* Preview Content */,
@@ -67,6 +154,78 @@
 				1B925ED0251A3AE9007FF85D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1B925EF0251C9B40007FF85D /* API */ = {
+			isa = PBXGroup;
+			children = (
+				1B925EF2251C9B60007FF85D /* Endpoint.swift */,
+				1B925EF6251C9B9C007FF85D /* Targets.swift */,
+				1B925EF9251CAF39007FF85D /* Client.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		1B925EFC251CAF65007FF85D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1B925EFD251CAF7D007FF85D /* Team.swift */,
+				1B56413E251DF7130085AE2E /* Charts.swift */,
+				1B2CE8E62521FBC90016C194 /* Customer.swift */,
+				1B2CE8E92521FC500016C194 /* Address.swift */,
+				1B2CE8EC2521FC840016C194 /* Invoice.swift */,
+				1B2CE8EF252209E70016C194 /* Contract.swift */,
+				1B2CE8F225220CC80016C194 /* Pagination.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1BA924BC251CCB0300D0C153 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1BD82C8525224E0400BCFE82 /* Invoices */,
+				1B2CE8E22521FADA0016C194 /* Customers */,
+				1B564138251DF3B80085AE2E /* Layout */,
+				1BA924BE251CCB1200D0C153 /* Authentication */,
+				1BA924BD251CCB0E00D0C153 /* Dashboard */,
+				1B925ECB251A3AE9007FF85D /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1BA924BD251CCB0E00D0C153 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				1B2CE8DB2521F6CF0016C194 /* Components */,
+				1BA924BF251CCB2400D0C153 /* Dashboard.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		1BA924BE251CCB1200D0C153 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				1BA924C2251CCB3C00D0C153 /* Authenticate.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		1BD82C8525224E0400BCFE82 /* Invoices */ = {
+			isa = PBXGroup;
+			children = (
+				1BD82C8A2522542600BCFE82 /* Components */,
+				1BD82C8625224E1500BCFE82 /* InvoiceDetail.swift */,
+				1BD82C9325225D7C00BCFE82 /* Invoices.swift */,
+			);
+			path = Invoices;
+			sourceTree = "<group>";
+		};
+		1BD82C8A2522542600BCFE82 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1BD82C8B2522543100BCFE82 /* PricingRow.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +244,12 @@
 			dependencies = (
 			);
 			name = InvoiceKit;
+			packageProductDependencies = (
+				1B925EED251C9B39007FF85D /* Moya */,
+				1BA924B9251CC37B00D0C153 /* KeychainSwift */,
+				1B2CE8D82521ED100016C194 /* SwiftUICharts */,
+				1BD82C90252258EE00BCFE82 /* BetterSafariView */,
+			);
 			productName = InvoiceKit;
 			productReference = 1B925EC6251A3AE9007FF85D /* InvoiceKit.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +277,12 @@
 				Base,
 			);
 			mainGroup = 1B925EBD251A3AE9007FF85D;
+			packageReferences = (
+				1B925EEC251C9B39007FF85D /* XCRemoteSwiftPackageReference "Moya" */,
+				1BA924B8251CC37B00D0C153 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+				1B2CE8D72521ED100016C194 /* XCRemoteSwiftPackageReference "SwiftUICharts" */,
+				1BD82C8F252258EE00BCFE82 /* XCRemoteSwiftPackageReference "BetterSafariView" */,
+			);
 			productRefGroup = 1B925EC7251A3AE9007FF85D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,7 +310,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B925ECC251A3AE9007FF85D /* ContentView.swift in Sources */,
+				1B2CE8F6252215590016C194 /* CustomerDetail.swift in Sources */,
+				1B2CE8E72521FBC90016C194 /* Customer.swift in Sources */,
+				1BD82C8725224E1500BCFE82 /* InvoiceDetail.swift in Sources */,
+				1BA924C0251CCB2400D0C153 /* Dashboard.swift in Sources */,
+				1B925EF3251C9B60007FF85D /* Endpoint.swift in Sources */,
+				1B925EFE251CAF7D007FF85D /* Team.swift in Sources */,
+				1B2CE8ED2521FC840016C194 /* Invoice.swift in Sources */,
+				1B925EF7251C9B9C007FF85D /* Targets.swift in Sources */,
+				1B925EFA251CAF39007FF85D /* Client.swift in Sources */,
+				1B56413A251DF5A20085AE2E /* Layout.swift in Sources */,
+				1B2CE8E42521FB980016C194 /* Customers.swift in Sources */,
+				1B2CE8EA2521FC500016C194 /* Address.swift in Sources */,
 				1B925ECA251A3AE9007FF85D /* InvoiceKitApp.swift in Sources */,
+				1BD82C9425225D7C00BCFE82 /* Invoices.swift in Sources */,
+				1B2CE8DD2521F6DE0016C194 /* ChartCard.swift in Sources */,
+				1BD82C8C2522543100BCFE82 /* PricingRow.swift in Sources */,
+				1B2CE8F0252209E70016C194 /* Contract.swift in Sources */,
+				1B2CE8FA25221A750016C194 /* Optionals.swift in Sources */,
+				1B56413F251DF7130085AE2E /* Charts.swift in Sources */,
+				1B2CE8F325220CC80016C194 /* Pagination.swift in Sources */,
+				1B2CE8E02521F8740016C194 /* SingleChartCard.swift in Sources */,
+				1BA924C3251CCB3C00D0C153 /* Authenticate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +518,64 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1B2CE8D72521ED100016C194 /* XCRemoteSwiftPackageReference "SwiftUICharts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mecid/SwiftUICharts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.0;
+			};
+		};
+		1B925EEC251C9B39007FF85D /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.0.0;
+			};
+		};
+		1BA924B8251CC37B00D0C153 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 19.0.0;
+			};
+		};
+		1BD82C8F252258EE00BCFE82 /* XCRemoteSwiftPackageReference "BetterSafariView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stleamist/BetterSafariView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1B2CE8D82521ED100016C194 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B2CE8D72521ED100016C194 /* XCRemoteSwiftPackageReference "SwiftUICharts" */;
+			productName = SwiftUICharts;
+		};
+		1B925EED251C9B39007FF85D /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B925EEC251C9B39007FF85D /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		1BA924B9251CC37B00D0C153 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1BA924B8251CC37B00D0C153 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+		1BD82C90252258EE00BCFE82 /* BetterSafariView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1BD82C8F252258EE00BCFE82 /* XCRemoteSwiftPackageReference "BetterSafariView" */;
+			productName = BetterSafariView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1B925EBE251A3AE9007FF85D /* Project object */;
 }
