@@ -48,4 +48,14 @@ enum Endpoint {
     /// Get a single invoice
     ///
     case getInvoice(id: UUID)
+    
+    ///
+    /// Get contracts
+    ///
+    case getContracts
+    
+    ///
+    /// Get a single contract
+    ///
+    case getContract(id: UUID)
 }

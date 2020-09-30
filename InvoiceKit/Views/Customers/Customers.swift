@@ -20,8 +20,10 @@ struct Customers: View {
                     }
                 }
             }
+            .listStyle(PlainListStyle())
+            .navigationTitle("Clients")
             
-            .navigationBarTitle("Clients")
+            Text("Séléctionnez un client")
         }
         .onReceive(client.error) { error in
             print(error)

@@ -37,4 +37,12 @@ extension Optional where Wrapped == String {
             return "N/A"
         }
     }
+    
+    func ifEmpty(_ str: String) -> String {
+        if (self ?? "").isEmpty {
+            return str
+        } else {
+            return self ?? "N/A"
+        }
+    }
 }

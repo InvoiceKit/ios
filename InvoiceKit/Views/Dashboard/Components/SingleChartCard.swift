@@ -12,6 +12,7 @@ struct SingleChartCard: View {
     @Binding public var value: Int
     @State public var icon: String
     @State public var color: Color
+    @State public var euro: Bool = false
     
     var body: some View {
         HStack {
@@ -19,9 +20,10 @@ struct SingleChartCard: View {
                 .foregroundColor(color)
                 .padding(.trailing)
                 .frame(width: 50)
+                .imageScale(.large)
             
             VStack(alignment: .leading) {
-                Text(String(value))
+                Text("\(String(value)) \(euro ? "€" : "")")
                     .bold()
                     .font(.title)
                 
@@ -35,7 +37,6 @@ struct SingleChartCard: View {
         .padding()
         .background(Color(UIColor.systemGray6))
         .cornerRadius(15)
-        .padding([.leading, .bottom, .trailing])
     }
 }
 

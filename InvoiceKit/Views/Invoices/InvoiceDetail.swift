@@ -18,39 +18,16 @@ struct InvoiceDetail: View {
         Form {
             Section(header: Text("Informations")) {
                 List {
-                    HStack {
-                        Text("Numéro")
-                        Spacer()
-                        Text(invoice.number.safe)
-                    }
-                    
-                    HStack {
-                        Text("Statut")
-                        Spacer()
-                        Text(invoice.getStatus())
-                    }
-                    
-                    HStack {
-                        Text("Date de création")
-                        Spacer()
-                        Text(invoice.createdAt.date)
-                    }
-                    
-                    HStack {
-                        Text("Dernière modification")
-                        Spacer()
-                        Text(invoice.updatedAt.date)
-                    }
+                    ListRow("Numéro", with: Text(invoice.number.safe))
+                    ListRow("Status", with: Text(invoice.getStatus()))
+                    ListRow("Date de création", with: Text(invoice.createdAt.date))
+                    ListRow("Dernière modification", with: Text(invoice.updatedAt.date))
                 }
             }
             
             Section(header: Text("Client")) {
                 List {
-                    HStack {
-                        Text("Client")
-                        Spacer()
-                        Text("\(invoice.customer?.getName() ?? "N/A")")
-                    }
+                    ListRow("Client", with: Text("\(invoice.customer?.getName() ?? "N/A")"))
                     
                     HStack {
                         Text("Adresse")

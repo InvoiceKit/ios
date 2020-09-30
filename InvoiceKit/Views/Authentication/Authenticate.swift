@@ -17,6 +17,8 @@ struct Authenticate: View {
     @State private var username: String = ""
     @State private var password: String = ""
     
+    @State private var isPresented = false
+    
     ///
     /// Try to login
     ///
@@ -30,7 +32,7 @@ struct Authenticate: View {
             Image("Icon")
                 .resizable()
                 .frame(width: 100, height: 100, alignment: .center)
-                .clipShape(Circle())
+                .clipShape(RoundedRectangle(cornerRadius: 25))
             
             Text("Connexion")
                 .font(.title)
@@ -52,30 +54,24 @@ struct Authenticate: View {
                 .cornerRadius(4)
                 .padding([.leading, .trailing], 10)
             
-            HStack {
-                Spacer()
-                
-                Text("Créer un compte")
-                    .padding([.trailing])
-                    .font(.footnote)
-                    .foregroundColor(.gray)
-            }.padding(.bottom)
-            
             Button(action: login, label: {
                 HStack {
                     Spacer()
                     
+                    Image(systemName: "checkmark")
+                    
                     Text("Se connecter")
                         .bold()
-                        .foregroundColor(.white)
                     
                     Spacer()
                 }
+                .foregroundColor(.white)
             })
             .padding()
             .background(Color.green)
             .cornerRadius(4)
             .padding([.leading, .trailing], 10)
+            .padding(.top, 20)
         }
         .onReceive(client.success) { model in
             // Store token and username
@@ -87,8 +83,11 @@ struct Authenticate: View {
             isLogged = true
         }
         .onReceive(client.error, perform: { error in
-            // Display error
-            
+            print("[AuthenticateView] Error: \(error)")
+            isPresented = true
+        })
+        .alert(isPresented: $isPresented, content: {
+            Alert(title: Text("Impossible de se connecter"), message: Text("Les identifiants fournis semblent incorrects."), dismissButton: .cancel(Text("Fermer")))
         })
     }
 }

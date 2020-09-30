@@ -16,22 +16,39 @@ struct Dashboard: View {
     @State private var ContractsPoints: [DataPoint] = []
     
     var body: some View {
-        NavigationView {
-            ScrollView {
-                ChartCard(
-                    title: "Dernières factures",
-                    icon: "doc.plaintext.fill",
-                    color: .green,
-                    points: $InvoicesPoints
-                )
+        ScrollView {
+            HStack {
+                Text("Tableau de bord")
+                    .font(.title)
+                    .bold()
                 
-                ChartCard(
-                    title: "Derniers contrats",
-                    icon: "doc.text.below.ecg.fill",
-                    color: .blue,
-                    points: $ContractsPoints
-                )
-                
+                Spacer()
+            }
+            .padding()
+            
+            ChartCard(
+                title: "Dernières factures",
+                icon: "doc.plaintext.fill",
+                color: .green,
+                points: $InvoicesPoints
+            )
+            
+            ChartCard(
+                title: "Derniers contrats",
+                icon: "doc.text.below.ecg.fill",
+                color: .blue,
+                points: $ContractsPoints
+            )
+            
+            SingleChartCard(
+                title: "Chiffre d'affaire",
+                value: .constant(Int(charts.prices.paid.value + charts.prices.waiting.value)),
+                icon: "arrow.down.circle.fill",
+                color: .purple,
+                euro: true
+            ).padding([.leading, .trailing, .bottom])
+            
+            HStack {
                 SingleChartCard(
                     title: "Clients",
                     value: $charts.customers,
@@ -46,7 +63,7 @@ struct Dashboard: View {
                     color: .orange
                 )
             }
-            .navigationTitle("Tableau de bord")
+            .padding([.leading, .trailing, .bottom])
         }
         .onReceive(client.error) { error in
             print(error)

@@ -29,6 +29,10 @@ extension Endpoint: TargetType, AccessTokenAuthorizable {
             return "/invoices"
         case let .getInvoice(id):
             return "/invoices/\(id)"
+        case .getContracts:
+            return "/contracts"
+        case let .getContract(id):
+            return "/contracts/\(id)"
         }
     }
     

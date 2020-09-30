@@ -27,6 +27,12 @@ struct Layout: View {
                     Image(systemName: "tray.full.fill")
                     Text("Factures")
                 }
+            
+            Contracts()
+                .tabItem {
+                    Image(systemName: "doc.text.below.ecg.fill")
+                    Text("Contrats")
+                }
         }
     }
 }

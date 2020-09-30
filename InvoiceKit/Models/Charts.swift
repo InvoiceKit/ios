@@ -10,6 +10,7 @@ import Foundation
 struct Charts: Codable {
     var customers: Int = 0
     var invoices: ChartsInvoice = ChartsInvoice()
+    var prices: ChartsPrices = ChartsPrices()
     
     // Daily invoices
     var daily: [String: Int] = [:]

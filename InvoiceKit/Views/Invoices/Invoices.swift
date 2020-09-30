@@ -25,8 +25,10 @@ struct Invoices: View {
                     }
                 }
             }
+            .listStyle(PlainListStyle())
+            .navigationTitle("Factures")
             
-            .navigationBarTitle("Factures")
+            Text("Séléctionnez une facture")
         }
         .onReceive(client.error) { error in
             print(error)

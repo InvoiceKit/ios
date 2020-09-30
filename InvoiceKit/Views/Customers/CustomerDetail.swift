@@ -17,9 +17,9 @@ struct CustomerDetail: View {
         Form {
             Section(header: Text("Informations")) {
                 List {
-                    Text("Entreprise: \(customer.company.safe)")
-                    Text("Téléphone: \(customer.phone.safe)")
-                    Text("Email: \(customer.email.safe)")
+                    ListRow("Entreprise", with: Text(customer.company.safe))
+                    ListRow("Téléphone", with: Text(customer.phone.safe))
+                    ListRow("Email", with: Text(customer.email.safe))
                 }
             }
             
@@ -43,7 +43,7 @@ struct CustomerDetail: View {
                         ForEach(customer.invoices ?? [], id: \.id) { (invoice: Invoice) in
                             NavigationLink(destination: InvoiceDetail(id: invoice.id!)) {
                                 VStack(alignment: .leading) {
-                                    Text("\(invoice.number.safe)")
+                                    Text("\(invoice.number.ifEmpty("Non numérotée"))")
                                     Text("\(invoice.getType()) — \(invoice.getStatus())")
                                         .font(.footnote)
                                         .foregroundColor(.secondary)
@@ -59,8 +59,8 @@ struct CustomerDetail: View {
                     List {
                         ForEach(customer.contracts ?? [], id: \.id) { (contract: Contract) in
                             VStack(alignment: .leading) {
-                                Text("\(contract.serial)")
-                                Text("\(contract.type) — \(contract.status)")
+                                Text("\(contract.serial.ifEmpty("Aucun numéro de série"))")
+                                Text("\(contract.type.ifEmpty("Aucun type")) — \(contract.getStatus())")
                                     .font(.footnote)
                                     .foregroundColor(.secondary)
                             }

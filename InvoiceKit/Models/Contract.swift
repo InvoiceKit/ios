@@ -9,18 +9,26 @@ import Foundation
 
 struct Contract: Codable {
     var id: UUID?
-    var customer: Customer
-    var address: Address
-    var createdAt: Date?
-    var updatedAt: Date?
-    var type: String
-    var serial: String
-    var status: String
-    var changes: [ContractChange]?
+    var customer: Customer?
+    var address: Address?
+    var createdAt: String?
+    var updatedAt: String?
+    var type: String?
+    var serial: String?
+    var status: String?
+    var changes: [Change]?
     var date: String?
     
+    func getStatus() -> String {
+        switch status ?? "" {
+        case "ongoing": return "En cours"
+        default:
+            return "Annulé"
+        }
+    }
+    
     // MARK: - Fields
-    struct ContractChange: Codable {
+    struct Change: Codable {
         var date: String
         var description: String
     }
