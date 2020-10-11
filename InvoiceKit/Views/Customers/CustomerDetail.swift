@@ -58,11 +58,13 @@ struct CustomerDetail: View {
                 Section(header: Text("Contrats")) {
                     List {
                         ForEach(customer.contracts ?? [], id: \.id) { (contract: Contract) in
-                            VStack(alignment: .leading) {
-                                Text("\(contract.serial.ifEmpty("Aucun numéro de série"))")
-                                Text("\(contract.type.ifEmpty("Aucun type")) — \(contract.getStatus())")
-                                    .font(.footnote)
-                                    .foregroundColor(.secondary)
+                            NavigationLink(destination: ContractDetail(id: contract.id!)) {
+                                VStack(alignment: .leading) {
+                                    Text("\(contract.serial.ifEmpty("Aucun numéro de série"))")
+                                    Text("\(contract.type.ifEmpty("Aucun type")) — \(contract.getStatus())")
+                                        .font(.footnote)
+                                        .foregroundColor(.secondary)
+                                }
                             }
                         }
                     }
