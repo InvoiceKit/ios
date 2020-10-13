@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Customer: Codable {
+struct Customer: Codable, Identifiable {
     var id: UUID?
     var addresses: [Address]? = []
     var invoices: [Invoice]? = []
@@ -22,7 +22,7 @@ struct Customer: Codable {
         if company?.isEmpty ?? true {
             return "\(firstName ?? "") \(lastName ?? "")"
         } else {
-            return "\(firstName ?? "") \(lastName ?? "") (\(company ?? ""))"
+            return company ?? ""
         }
     }
 }

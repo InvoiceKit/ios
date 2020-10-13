@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Address: Codable {
+struct Address: Codable, Identifiable {
     var id: UUID?
     var line: String?
     var zip: String?

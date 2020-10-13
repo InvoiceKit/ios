@@ -16,54 +16,48 @@ struct Dashboard: View {
     @State private var ContractsPoints: [DataPoint] = []
     
     var body: some View {
-        ScrollView {
-            HStack {
-                Text("Tableau de bord")
-                    .font(.title)
-                    .bold()
+        NavigationView {
+            ScrollView {
+                ChartCard(
+                    title: "Dernières factures",
+                    icon: "doc.plaintext.fill",
+                    color: .green,
+                    points: $InvoicesPoints
+                )
                 
-                Spacer()
-            }
-            .padding()
-            
-            ChartCard(
-                title: "Dernières factures",
-                icon: "doc.plaintext.fill",
-                color: .green,
-                points: $InvoicesPoints
-            )
-            
-            ChartCard(
-                title: "Derniers contrats",
-                icon: "doc.text.below.ecg.fill",
-                color: .blue,
-                points: $ContractsPoints
-            )
-            
-            SingleChartCard(
-                title: "Chiffre d'affaire",
-                value: .constant(Int(charts.prices.paid.value + charts.prices.waiting.value)),
-                icon: "arrow.down.circle.fill",
-                color: .purple,
-                euro: true
-            ).padding([.leading, .trailing, .bottom])
-            
-            HStack {
-                SingleChartCard(
-                    title: "Clients",
-                    value: $charts.customers,
-                    icon: "person.3.fill",
-                    color: .red
+                ChartCard(
+                    title: "Derniers contrats",
+                    icon: "doc.text.below.ecg.fill",
+                    color: .blue,
+                    points: $ContractsPoints
                 )
                 
                 SingleChartCard(
-                    title: "Factures",
-                    value: $charts.invoices.total,
-                    icon: "folder.fill",
-                    color: .orange
-                )
+                    title: "Chiffre d'affaire",
+                    value: .constant(Int(charts.prices.paid.value + charts.prices.waiting.value)),
+                    icon: "arrow.down.circle.fill",
+                    color: .purple,
+                    euro: true
+                ).padding([.leading, .trailing, .bottom])
+                
+                HStack {
+                    SingleChartCard(
+                        title: "Clients",
+                        value: $charts.customers,
+                        icon: "person.3.fill",
+                        color: .red
+                    )
+                    
+                    SingleChartCard(
+                        title: "Factures",
+                        value: $charts.invoices.total,
+                        icon: "folder.fill",
+                        color: .orange
+                    )
+                }
+                .padding([.leading, .trailing, .bottom])
             }
-            .padding([.leading, .trailing, .bottom])
+            .navigationTitle("Tableau de bord")
         }
         .onReceive(client.error) { error in
             print(error)

@@ -10,26 +10,29 @@ import SwiftUI
 struct Invoices: View {
     private let client = Client<Pagination<Invoice>>()
     @State private var invoices: [Invoice] = []
+    @ObservedObject private var searchBar = SearchBar()
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(invoices, id: \.id) { (invoice: Invoice) in
-                    NavigationLink(destination: InvoiceDetail(id: invoice.id!)) {
-                        VStack(alignment: .leading) {
-                            Text(invoice.customer?.getName() ?? "N/A")
-                            Text("\(invoice.getType()) \(invoice.number ?? "") — \(invoice.getStatus())")
-                                .font(.footnote)
-                                .foregroundColor(.secondary)
-                        }
+            List(invoices.filter {
+                searchBar.text.isEmpty ||
+                ($0.customer?.getName() ?? "").localizedStandardContains(searchBar.text)
+            }) { (invoice: Invoice) in
+                NavigationLink(destination: InvoiceDetail(id: invoice.id!)) {
+                    VStack(alignment: .leading) {
+                        Text(invoice.customer?.getName() ?? "N/A")
+                        Text("\(invoice.getType()) \(invoice.number ?? "") — \(invoice.getStatus())")
+                            .font(.footnote)
+                            .foregroundColor(.secondary)
                     }
                 }
             }
-            .listStyle(PlainListStyle())
-            .navigationTitle("Factures")
+            .navigationBarTitle("Factures")
+            .add(searchBar)
             
             Text("Séléctionnez une facture")
         }
+        .navigationViewStyle(StackNavigationViewStyle())
         .onReceive(client.error) { error in
             print(error)
         }

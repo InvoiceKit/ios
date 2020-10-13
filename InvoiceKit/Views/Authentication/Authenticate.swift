@@ -31,8 +31,9 @@ struct Authenticate: View {
         VStack {
             Image("Icon")
                 .resizable()
-                .frame(width: 100, height: 100, alignment: .center)
-                .clipShape(RoundedRectangle(cornerRadius: 25))
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 150, height: 150, alignment: .center)
+                
             
             Text("Connexion")
                 .font(.title)

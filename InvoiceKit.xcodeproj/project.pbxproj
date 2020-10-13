@@ -23,6 +23,8 @@
 		1B3E8DCA252471AC0016499B /* ListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3E8DC9252471AC0016499B /* ListRow.swift */; };
 		1B56413A251DF5A20085AE2E /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B564139251DF5A20085AE2E /* Layout.swift */; };
 		1B56413F251DF7130085AE2E /* Charts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B56413E251DF7130085AE2E /* Charts.swift */; };
+		1B7038EB2535AB8300D73720 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7038EA2535AB8300D73720 /* SearchBar.swift */; };
+		1B7038EE2535ABA700D73720 /* ViewControllerResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7038ED2535ABA700D73720 /* ViewControllerResolver.swift */; };
 		1B925ECA251A3AE9007FF85D /* InvoiceKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B925EC9251A3AE9007FF85D /* InvoiceKitApp.swift */; };
 		1B925ECC251A3AE9007FF85D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B925ECB251A3AE9007FF85D /* ContentView.swift */; };
 		1B925ECE251A3AE9007FF85D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B925ECD251A3AE9007FF85D /* Assets.xcassets */; };
@@ -57,6 +59,8 @@
 		1B3E8DC9252471AC0016499B /* ListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRow.swift; sourceTree = "<group>"; };
 		1B564139251DF5A20085AE2E /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		1B56413E251DF7130085AE2E /* Charts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Charts.swift; sourceTree = "<group>"; };
+		1B7038EA2535AB8300D73720 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		1B7038ED2535ABA700D73720 /* ViewControllerResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerResolver.swift; sourceTree = "<group>"; };
 		1B925EC6251A3AE9007FF85D /* InvoiceKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InvoiceKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B925EC9251A3AE9007FF85D /* InvoiceKitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceKitApp.swift; sourceTree = "<group>"; };
 		1B925ECB251A3AE9007FF85D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 		1B3E8DC8252471A00016499B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1B7038E92535AB5D00D73720 /* SearchBar */,
 				1B3E8DC9252471AC0016499B /* ListRow.swift */,
 			);
 			path = Components;
@@ -138,6 +143,15 @@
 				1B564139251DF5A20085AE2E /* Layout.swift */,
 			);
 			path = Layout;
+			sourceTree = "<group>";
+		};
+		1B7038E92535AB5D00D73720 /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				1B7038EA2535AB8300D73720 /* SearchBar.swift */,
+				1B7038ED2535ABA700D73720 /* ViewControllerResolver.swift */,
+			);
+			path = SearchBar;
 			sourceTree = "<group>";
 		};
 		1B925EBD251A3AE9007FF85D = {
@@ -348,6 +362,7 @@
 				1B925EFA251CAF39007FF85D /* Client.swift in Sources */,
 				1B56413A251DF5A20085AE2E /* Layout.swift in Sources */,
 				1B2CE8E42521FB980016C194 /* Customers.swift in Sources */,
+				1B7038EB2535AB8300D73720 /* SearchBar.swift in Sources */,
 				1B2CE8EA2521FC500016C194 /* Address.swift in Sources */,
 				1B925ECA251A3AE9007FF85D /* InvoiceKitApp.swift in Sources */,
 				1BD82C9425225D7C00BCFE82 /* Invoices.swift in Sources */,
@@ -357,6 +372,7 @@
 				1B2CE8FA25221A750016C194 /* Optionals.swift in Sources */,
 				1B56413F251DF7130085AE2E /* Charts.swift in Sources */,
 				1B2CE8F325220CC80016C194 /* Pagination.swift in Sources */,
+				1B7038EE2535ABA700D73720 /* ViewControllerResolver.swift in Sources */,
 				1B2CE8E02521F8740016C194 /* SingleChartCard.swift in Sources */,
 				1BA924C3251CCB3C00D0C153 /* Authenticate.swift in Sources */,
 				1B3E8DCA252471AC0016499B /* ListRow.swift in Sources */,

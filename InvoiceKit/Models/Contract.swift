@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Contract: Codable {
+struct Contract: Codable, Identifiable {
     var id: UUID?
     var customer: Customer?
     var address: Address?

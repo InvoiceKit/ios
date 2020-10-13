@@ -10,26 +10,29 @@ import SwiftUI
 struct Contracts: View {
     private let client = Client<Pagination<Contract>>()
     @State private var contracts: [Contract] = []
+    @ObservedObject private var searchBar = SearchBar()
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(contracts, id: \.id) { (contract: Contract) in
-                    NavigationLink(destination: ContractDetail(id: contract.id!)) {
-                        VStack(alignment: .leading) {
-                            Text(contract.customer?.getName() ?? "N/A")
-                            Text("\(contract.type.ifEmpty("Aucun type")) — \(contract.getStatus())")
-                                .font(.footnote)
-                                .foregroundColor(.secondary)
-                        }
+            List(contracts.filter {
+                searchBar.text.isEmpty ||
+                    ($0.customer?.getName() ?? "").localizedStandardContains(searchBar.text)
+            }) { (contract: Contract) in
+                NavigationLink(destination: ContractDetail(id: contract.id!)) {
+                    VStack(alignment: .leading) {
+                        Text(contract.customer?.getName() ?? "N/A")
+                        Text("\(contract.type.ifEmpty("Aucun type")) — \(contract.getStatus())")
+                            .font(.footnote)
+                            .foregroundColor(.secondary)
                     }
                 }
             }
-            .listStyle(PlainListStyle())
-            .navigationTitle("Contrats")
+            .navigationBarTitle("Contrats")
+            .add(searchBar)
             
             Text("Séléctionnez un contrat")
         }
+        .navigationViewStyle(StackNavigationViewStyle())
         .onReceive(client.error) { error in
             print(error)
         }

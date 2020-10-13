@@ -10,21 +10,24 @@ import SwiftUI
 struct Customers: View {
     private let client = Client<Pagination<Customer>>()
     @State private var customers: [Customer] = []
+    @ObservedObject private var searchBar = SearchBar()
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(customers, id: \.id) { (customer: Customer) in
+            List(customers.filter {
+                searchBar.text.isEmpty ||
+                $0.getName().localizedStandardContains(searchBar.text)
+            }) { (customer: Customer) in
                     NavigationLink(destination: CustomerDetail(id: customer.id!)) {
                         Text(customer.getName())
                     }
-                }
             }
-            .listStyle(PlainListStyle())
-            .navigationTitle("Clients")
+            .navigationBarTitle("Clients")
+            .add(searchBar)
             
             Text("Séléctionnez un client")
         }
+        .navigationViewStyle(StackNavigationViewStyle())
         .onReceive(client.error) { error in
             print(error)
         }

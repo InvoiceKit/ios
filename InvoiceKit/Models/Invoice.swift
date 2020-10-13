@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Invoice: Codable {
+struct Invoice: Codable, Identifiable {
     var id: UUID?
     var team: Team?
     var customer: Customer?
